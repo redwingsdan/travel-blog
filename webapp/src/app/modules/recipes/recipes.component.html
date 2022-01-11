@@ -1,0 +1,5 @@
+<div class="container">
+  <div *ngFor="let recipe of recipes">
+    <recipe-card [recipe]="recipe" (click)="goToRecipe(recipe.recipeId)"></recipe-card>
+  </div>
+</div>

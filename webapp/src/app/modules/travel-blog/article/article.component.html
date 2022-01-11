@@ -1,0 +1,22 @@
+<div class="article-container">
+  <div class="title">{{article.title}}</div>
+  <div class="content">{{article.textContent}}</div>
+</div>
+
+<form [formGroup]="form" (ngSubmit)="save()">
+  <div *ngIf="form.enabled">
+    <label>Title</label>
+    <span class="form-value">
+      <input formControlName="title" type="text">
+    </span>
+
+    <label>Content</label>
+    <span class="form-value">
+        <textarea #textArea formControlName="textContent"></textarea>
+    </span>
+  </div>
+</form>
+
+<button class="btn" (click)="back()">Back</button>
+<button *ngIf="!form.enabled" class="btn" (click)="edit()">Edit</button>
+<button *ngIf="form.enabled" class="btn" (click)="save()">Save</button>

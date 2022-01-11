@@ -1,0 +1,21 @@
+<div class="recipe-container">
+  <div class="name">{{recipe.name}}</div>
+  <div class="description">{{recipe.description}}</div>
+  <div class="directions">{{recipe.directions}}</div>
+</div>
+
+<div *ngIf="isEditing">
+  <label>Name</label>
+  <span class="form-value">
+    <input [formControlName]="name" type="text">
+  </span>
+
+  <label>Description</label>
+  <span class="form-value">
+      <textarea #textArea [formControlName]="description"></textarea>
+  </span>
+</div>
+
+<button class="btn" (click)="back()">Back</button>
+<button *ngIf="!isEditing" class="btn" (click)="edit()">Edit</button>
+<button *ngIf="isEditing" class="btn" (click)="save()">Save</button>

@@ -1,0 +1,18 @@
+.btn {
+    @apply py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-400
+}
+
+.home-page-wrapper {
+  height: 100%;
+  padding: 6px 12px;
+
+  .row {
+    height: 100%;
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+}
+
+.widget-container {
+  padding: 6px;
+}

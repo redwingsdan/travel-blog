@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Home" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+<style type="text/css">
+	.icon-dark { fill: #21111b; }
+	.icon-mid { fill: #cec0cc; }
+	.icon-light { fill: #ffffff; }
+	.icon-accent { fill: #ffc107; }
+	.icon-bg { fill: #995085; }
+</style>
+<rect class="icon-bg" width="123.3" height="200"/>
+<rect x="146.8" class="icon-bg" width="53.2" height="200"/>
+<polygon class="icon-light" points="36.1,177.8 36.1,110.3 99.3,64.7 162.5,110.3 162.5,177.8 "/>
+<path class="icon-dark" d="M99.3,69.3l59.5,43v61.8h-119v-61.9L99.3,69.3 M99.3,60.2L95,63.3l-59.5,43l-3.1,2.2v73h133.7v-73.1l-3.1-2.2
+	l-59.5-42.9L99.3,60.2z"/>
+<rect x="132.8" y="28.5" class="icon-dark" width="29.7" height="54"/>
+<path class="icon-dark" d="M158.8,32.2v46.6h-22.2V32.2H158.8 M166.2,24.8h-37v61.4h37V24.8z"/>
+<polygon class="icon-dark" points="6.5,94.6 99.3,27.6 192.1,94.6 174.2,118.2 99.3,64.2 24.4,118.2 "/>
+<path class="icon-dark" d="M99.3,32.2l87.6,63.2l-13.5,17.8L99.3,59.7l-74.1,53.4L11.7,95.3L99.3,32.2 M99.3,23.1L95,26.2L7.4,89.3
+	l-6.2,4.4l4.6,6l13.5,17.8l4.4,5.7l5.9-4.2l69.8-50.4l69.8,50.4l5.9,4.2l4.4-5.7L193,99.7l4.6-6l-6.2-4.4l-87.7-63.2
+	C103.6,26.2,99.3,23.1,99.3,23.1z"/>
+<rect x="82" y="125.8" class="icon-accent" width="34.6" height="60.2"/>
+<path class="icon-dark" d="M112.9,129.5v52.8H85.7v-52.8H112.9 M120.3,122.1h-42v67.6h42V122.1z"/>
+</svg>

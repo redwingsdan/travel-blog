@@ -1,0 +1,55 @@
+<div class="top-nav">
+  <ul>
+    <ng-container *ngFor="let category of navData">
+      <!-- Non-expandable menu item, i.e. a direct link or action -->
+      <ng-container *ngIf="!category.isExpandable">
+        <li [routerLink]="category.routerLinkUrl">
+          <!--*hasPermissions="category.permissions?.permission levelLk category.permissions?.levelLk targetLk category.permissions?.targetLk"-->
+          <div class="svg-container" [inlineSVG]="category.iconPath">{{category.label}}</div>
+          <div class="nav-tooltip">{{ category.label }}</div>
+        </li>
+      </ng-container>
+
+      <!-- Expandable menu item that has a sub-menu -->
+      <ng-container *ngIf="category.isExpandable">
+        <li [routerLink]="category.routerLinkUrl" [matMenuTriggerFor]="menu">
+          <!--*hasPermissions="category.permissions?.permission levelLk category.permissions?.levelLk targetLk category.permissions?.targetLk"-->
+          <div class="svg-container" [inlineSVG]="category.iconPath"></div>
+          <div class="nav-tooltip">{{ category.label }}</div>
+          <mat-menu #menu="matMenu" xPosition="after">
+            <ng-container *ngFor="let navLink of category.navLinks">
+              <ng-container>
+
+                <!-- Non-expandable sub-menu item, i.e. a direct link or action -->
+                <ng-container *ngIf="!navLink.isExpandable">
+                  <button mat-menu-item [routerLink]="navLink.routerLinkUrl" (click)="navLink.navActionType ? navAction.emit(navLink.navActionType) : null">
+                    <!--*hasPermissions="navLink.permissions?.permission levelLk navLink.permissions?.levelLk targetLk navLink.permissions?.targetLk"-->
+                      {{ navLink.label }}</button>
+                </ng-container>
+
+                <!-- Expandable sub-menu item that has its own sub-menu -->
+                <ng-container *ngIf="navLink.isExpandable">
+                  <button mat-menu-item [routerLink]="navLink.routerLinkUrl" [matMenuTriggerFor]="subMenu">
+                    <!--*hasPermissions="navLink.permissions?.permission levelLk navLink.permissions?.levelLk targetLk navLink.permissions?.targetLk"-->
+                    {{ navLink.label }}</button>
+                  <mat-menu [xPosition]="'after'" #subMenu="matMenu">
+                    <ng-container *ngFor="let subNavLink of navLink.subNavLinks">
+                      <ng-container>
+                        <button mat-menu-item class="link-item sublink-item" [routerLink]="subNavLink.routerLinkUrl"
+                          (click)="subNavLink.navActionType ? navAction.emit(subNavLink.navActionType) : null">
+                          <!--*hasPermissions="subNavLink.permissions?.permission levelLk subNavLink.permissions?.levelLk targetLk subNavLink.permissions?.targetLk"-->
+                          {{ subNavLink.label }}</button>
+                      </ng-container>
+                    </ng-container>
+                  </mat-menu>
+                </ng-container>
+
+              </ng-container>
+            </ng-container>
+          </mat-menu>
+        </li>
+      </ng-container>
+
+    </ng-container>
+  </ul>
+</div>

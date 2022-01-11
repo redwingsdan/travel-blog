@@ -1,0 +1,11 @@
+<nav class="header" [ngClass]="{'impersonated-header' : user?.impersonatedBy}">
+  <div class="main-header-wrapper">
+    <div class="svg-container logo-container">
+      <div class="logo" [routerLink]="['/app/home']"></div>
+    </div>
+
+    <div class="top-nav-container">
+      <top-nav (navAction)="navAction($event)" [navData]="navData" [currentUser]="user"></top-nav>
+    </div>
+  </div>
+</nav>

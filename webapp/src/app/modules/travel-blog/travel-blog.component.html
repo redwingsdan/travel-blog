@@ -1,0 +1,5 @@
+<div class="container">
+  <div *ngFor="let blog of blogs">
+    <blog-card [blog]="blog" (click)="goToBlog(blog.blogId)"></blog-card>
+  </div>
+</div>
